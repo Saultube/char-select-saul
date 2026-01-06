@@ -179,6 +179,7 @@ local PALETTE_SAUL = {
 
 -- ACTIONS
 ACT_SAUL_TWIRL = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
+ACT_SAUL_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 
 function act_saul_twirl(m)
     local e = gStateExtras[m.playerIndex]
@@ -194,6 +195,31 @@ function act_saul_twirl(m)
     end
 end
 hook_mario_action(ACT_SAUL_TWIRL, act_saul_twirl)
+
+function act_saul_pound(m)
+    local e = gStateExtras[m.playerIndex]
+    local stepResult = common_air_action_step(m, ACT_GROUND_POUND_LAND, CHAR_ANIM_GROUND_POUND, AIR_STEP_NONE)
+    m.marioBodyState.eyeState = MARIO_EYES_LOOK_DOWN
+        e.rotAngle = e.rotAngle + 5000
+    m.marioObj.header.gfx.angle.y = e.rotAngle
+    if m.actionTimer == 0 then
+        m.vel.y = 45
+    end
+    m.vel.y = m.vel.y - 2
+        --e.rotAngle = e.rotAngle + 5000
+    --m.marioObj.header.gfx.angle.y = e.rotAngle
+
+    if m.input & INPUT_B_PRESSED ~= 0 then
+        m.faceAngle.y = m.intendedYaw
+        set_mario_action(m, ACT_DIVE, 0)
+        m.vel.y = 30
+    end
+
+    m.actionTimer = m.actionTimer + 1
+    return false
+end
+hook_mario_action(ACT_SAUL_POUND, act_saul_pound)
+
 
 saultwirltable = { -- saul twirl table
     [ACT_JUMP] = true,
@@ -234,6 +260,9 @@ function before_set_saul_action(m, inc)
 local e = gStateExtras[m.playerIndex]
 if inc == ACT_DIVE and m.controller.buttonDown & A_BUTTON ~= 0 and m.action == ACT_WALKING then
     return ACT_JUMP_KICK
+end
+if inc == ACT_GROUND_POUND then
+    return ACT_SAUL_POUND
 end
 end
 
