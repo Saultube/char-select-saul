@@ -198,10 +198,9 @@ hook_mario_action(ACT_SAUL_TWIRL, act_saul_twirl)
 
 function act_saul_pound(m)
     local e = gStateExtras[m.playerIndex]
-    local stepResult = common_air_action_step(m, ACT_GROUND_POUND_LAND, CHAR_ANIM_GROUND_POUND, AIR_STEP_NONE)
+    local stepResult = common_air_action_step(m, ACT_GROUND_POUND_LAND, CHAR_ANIM_RUNNING_UNUSED, AIR_STEP_NONE)
+    smlua_anim_util_set_animation(m.marioObj, 'saulslam')
     m.marioBodyState.eyeState = MARIO_EYES_LOOK_DOWN
-        e.rotAngle = e.rotAngle + 5000
-    m.marioObj.header.gfx.angle.y = e.rotAngle
     if m.actionTimer == 0 then
         m.vel.y = 45
     end
