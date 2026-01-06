@@ -149,12 +149,12 @@ local PALETTE_SAUL = {
     }
 
     local PALETTE_SAUL_KRISTALL = {
-        [PANTS] = { r = 0x33, g = 0x39, b = 0x4d },
-        [SHIRT] = { r = 0x99, g = 0x75, b = 0xd4 },
-        [GLOVES] = { r = 0x99, g = 0x75, b = 0xd4 },
-        [HAIR] = { r = 0x09, g = 0x0c, b = 0x09 },
-        [SKIN] = { r = 0xff, g = 0xdc, b = 0xa8 },
-        [CAP] = { r = 0x99, g = 0x75, b = 0xd4 },
+        [PANTS]  = "33394D",
+        [SHIRT]  = "9975D4",
+        [GLOVES] = "9975D4",
+        [HAIR]   = "090C09",
+        [SKIN]   = "FFDCA8",
+        [CAP]    = "9975D4",
     }
 
     local PALETTE_SAUL_KAKTUS = {
@@ -168,11 +168,12 @@ local PALETTE_SAUL = {
 
 
     local ANIMTABLE_SAUL = {
-        [_G.charSelect.CS_ANIM_MENU] = "saulmenu",
-        [CHAR_ANIM_IDLE_HEAD_CENTER] = 'saulidle',
-        [CHAR_ANIM_IDLE_HEAD_LEFT] = 'saulidle',
-        [CHAR_ANIM_IDLE_HEAD_RIGHT] = 'saulidle',
-        [CHAR_ANIM_FIRST_PERSON] = 'saulidle',
+        [_G.charSelect.CS_ANIM_MENU]     = "saulmenu",
+        [CHAR_ANIM_GROUND_POUND_LANDING] = "saulslamland",
+        [CHAR_ANIM_IDLE_HEAD_CENTER]     = 'saulidle',
+        [CHAR_ANIM_IDLE_HEAD_LEFT]       = 'saulidle',
+        [CHAR_ANIM_IDLE_HEAD_RIGHT]      = 'saulidle',
+        [CHAR_ANIM_FIRST_PERSON]         = 'saulidle',
     }
 
 -- MOVESET SHITS BELOW
@@ -255,14 +256,25 @@ local e = gStateExtras[m.playerIndex]
         e.HasSaultwirled = false
     end
 end
+
 function before_set_saul_action(m, inc)
 local e = gStateExtras[m.playerIndex]
 if inc == ACT_DIVE and m.controller.buttonDown & A_BUTTON ~= 0 and m.action == ACT_WALKING then
     return ACT_JUMP_KICK
 end
+if inc == ACT_BUTT_SLIDE_STOP then
+    return ACT_IDLE
+end
 if inc == ACT_GROUND_POUND then
     return ACT_SAUL_POUND
 end
+end
+
+function on_set_saul_action(m)
+    if m.action == ACT_GROUND_POUND_LAND then
+       play_sound(SOUND_ACTION_METAL_BONK, m.pos)
+       spawn_mist_from_global()
+    end
 end
 
 if _G.charSelectExists then
@@ -291,6 +303,7 @@ if _G.charSelectExists then
     _G.charSelect.character_add_voice(E_MODEL_PLUMBSAUL, VOICETABLE_SAUL)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_MARIO_UPDATE, SaulFunction)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_BEFORE_SET_MARIO_ACTION, before_set_saul_action)
+    _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_ON_SET_MARIO_ACTION, on_set_saul_action)
     _G.charSelect.character_add_graffiti(CT_SAUL, TEX_SAULGRAF)
     _G.charSelect.character_set_category(CT_SAUL, "DXA", true)
 else
