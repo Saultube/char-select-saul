@@ -175,6 +175,15 @@ local PALETTE_SAUL = {
         [CAP]    = "3E8948",
     }
 
+
+    local ANIMTABLE_SAUL = {
+        [_G.charSelect.CS_ANIM_MENU] = "saulmenu",
+        [CHAR_ANIM_IDLE_HEAD_CENTER] = 'saulidle',
+        [CHAR_ANIM_IDLE_HEAD_LEFT] = 'saulidle',
+        [CHAR_ANIM_IDLE_HEAD_RIGHT] = 'saulidle',
+        [CHAR_ANIM_FIRST_PERSON] = 'saulidle',
+    }
+
 -- MOVESET SHITS BELOW
 
 -- ACTIONS
@@ -209,6 +218,7 @@ saultwirltable = { -- saul twirl table
 
 function SaulFunction(m)
 local e = gStateExtras[m.playerIndex]
+    --[[
     if m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_IDLE_HEAD_LEFT then
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
     end
@@ -220,6 +230,7 @@ local e = gStateExtras[m.playerIndex]
     if m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_IDLE_HEAD_RIGHT then
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
     end
+    --]]
     if m.input & INPUT_A_PRESSED ~= 0 and e.HasSaultwirled == false and saultwirltable[m.action] == true and m.vel.y < 0 then
         set_mario_action(m, ACT_SAUL_TWIRL, 0)
         audio_sample_play(SAUL_TWIRL, m.pos, get_volume_sfx() / 76)
@@ -232,6 +243,9 @@ end
 if _G.charSelectExists then
     CT_SAUL =_G.charSelect.character_add("Saul", "New Saul Remodel #8", "Saul, Kaktus", {r = 178, g = 204, b = 102}, E_MODEL_SAUL, CT_MARIO, TEX_SAULICON, 1.2)
     _G.charSelect.character_add_costume(CT_SAUL, "Plumber Saul", "Saul but mildly more racist", "Saul, Kaktus", {r = 65, g = 47, b = 133}, E_MODEL_PLUMBSAUL, CT_MARIO, TEX_SAULPLUBBERICON, 1.2)
+    
+    _G.charSelect.character_add_animations(E_MODEL_SAUL, ANIMTABLE_SAUL)
+    _G.charSelect.character_add_animations(E_MODEL_PLUMBSAUL, ANIMTABLE_SAUL)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAUL, "Saul")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_CRAIG, "Craig")
