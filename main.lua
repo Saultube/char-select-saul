@@ -72,32 +72,23 @@ local PALETTE_SAUL = {
         [SHIRT]  = "ce6d00",
         [GLOVES] = "ffffb2",
         [HAIR]   = "745200",
-        [SKIN]   = "ecbf2c",
+        [SKIN]   = "ffcd4b",
         [CAP]    = "ce6d00",
     }
 
-    local PALETTE_SAUL = {
-        [PANTS]  = "FFFFFF", --dont delete this color cuz its used in cs's paintbucket
-        [SHIRT]  = "B2CC66",
-        [GLOVES] = "FFFFFF",
-        [HAIR]   = "8E765A",
-        [SKIN]   = "FFDDA3",
-        [CAP]    = "B2CC66",
-    }
-
     local PALETTE_GOOD_SAUL = {
-        [PANTS]  = "FFFFFF", --dont delete this color cuz its used in cs's paintbucket
+        [PANTS]  = "d3ebff", --dont delete this color cuz its used in cs's paintbucket
         [SHIRT]  = "7d85ee",
-        [GLOVES] = "FFFFFF",
+        [GLOVES] = "d3ebff",
         [HAIR]   = "8E765A",
         [SKIN]   = "FFDDA3",
         [CAP]    = "7d85ee",
     }
 
     local PALETTE_EVIL_SAUL = {
-        [PANTS]  = "FFFFFF", --dont delete this color cuz its used in cs's paintbucket
+        [PANTS]  = "ffe5e5", --dont delete this color cuz its used in cs's paintbucket
         [SHIRT]  = "c33131",
-        [GLOVES] = "FFFFFF",
+        [GLOVES] = "ffe5e5",
         [HAIR]   = "8E765A",
         [SKIN]   = "FFDDA3",
         [CAP]    = "c33131",
