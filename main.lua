@@ -2,8 +2,10 @@
 -- description: Saul is back for the one millionth time
 
 local E_MODEL_SAUL = smlua_model_util_get_id("saul_geo")
+local E_MODEL_PLUMBSAUL = smlua_model_util_get_id("saulplumb_geo")
 
 local TEX_SAULICON = get_texture_info("saulicon")
+local TEX_SAULPLUBBERICON = get_texture_info("plumbersaulicon")
 local TEX_SAULGRAF = get_texture_info("saulgraf")
 
 local TEXT_MOD_NAME = "Saul"
@@ -175,6 +177,7 @@ end
 
 if _G.charSelectExists then
     CT_SAUL =_G.charSelect.character_add("Saul", "New Saul Remodel #8", "Saul, Kaktus", {r = 178, g = 204, b = 102}, E_MODEL_SAUL, CT_MARIO, TEX_SAULICON, 1.2)
+    _G.charSelect.character_add_costume(CT_SAUL, "Plumber Saul", "Saul but mildly more racist", "Saul, Kaktus", {r = 65, g = 47, b = 133}, E_MODEL_PLUMBSAUL, CT_MARIO, TEX_SAULPLUBBERICON, 1.2)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAUL, "Saul")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_CRAIG, "Craig")

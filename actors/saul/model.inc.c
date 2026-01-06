@@ -2,10 +2,6 @@ Lights1 saul_shirt_lights = gdSPDefLights1(
 	0x57, 0x65, 0x2F,
 	0xB2, 0xCC, 0x66, 0x28, 0x28, 0x28);
 
-Lights1 saul_Metal__CAP__lights = gdSPDefLights1(
-	0xFF, 0x0, 0x0,
-	0x0, 0x0, 0x0, 0x28, 0x28, 0x28);
-
 Lights1 saul_sauleyeblink1_lights = gdSPDefLights1(
 	0x7F, 0x7F, 0x7F,
 	0xFF, 0xFF, 0xFF, 0x28, 0x28, 0x28);
@@ -58,40 +54,8 @@ Lights1 saul_skin_lights = gdSPDefLights1(
 	0x7F, 0x6E, 0x4F,
 	0xFF, 0xDD, 0xA3, 0x28, 0x28, 0x28);
 
-Lights1 saul_Half_Closed_Eyes__SKIN__lights = gdSPDefLights1(
-	0x7F, 0x5F, 0x39,
-	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
-
-Lights1 saul_Closed_Eyes__SKIN__lights = gdSPDefLights1(
-	0x7F, 0x5F, 0x39,
-	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
-
-Lights1 saul_Left_Eyes__SKIN__lights = gdSPDefLights1(
-	0x7F, 0x5F, 0x39,
-	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
-
-Lights1 saul_Right_Eyes__SKIN__lights = gdSPDefLights1(
-	0x7F, 0x5F, 0x39,
-	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
-
-Lights1 saul_Up_Eyes__SKIN__lights = gdSPDefLights1(
-	0x7F, 0x5F, 0x39,
-	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
-
-Lights1 saul_Down_Eyes__SKIN__lights = gdSPDefLights1(
-	0x7F, 0x5F, 0x39,
-	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
-
-Lights1 saul_Dead_Eyes__SKIN__lights = gdSPDefLights1(
-	0x7F, 0x5F, 0x39,
-	0xFE, 0xC1, 0x79, 0x28, 0x28, 0x28);
-
-Texture saul_Metal_Shade_rgba16_rgba16[] = {
-	#include "actors/saul/Metal_Shade.rgba16.inc.c"
-};
-
-Texture saul_Metal_Light_rgba16_rgba16[] = {
-	#include "actors/saul/Metal_Light.rgba16.inc.c"
+Texture saul_nephew_metal_rgba16_i8[] = {
+	#include "actors/saul/nephew_metal.rgba16.i8.inc.c"
 };
 
 Texture saul_saulface2_ci4[] = {
@@ -164,58 +128,6 @@ Texture saul_saulface1_ci4[] = {
 
 Texture saul_saulface1_pal_rgba16[] = {
 	#include "actors/saul/saulface1.rgba16.pal"
-};
-
-Texture saul_mario_eyes_half_closed_rgba16_ci8[] = {
-	#include "actors/saul/mario_eyes_half_closed.rgba16.ci8.inc.c"
-};
-
-Texture saul_mario_eyes_half_closed_rgba16_pal_rgba16[] = {
-	#include "actors/saul/mario_eyes_half_closed.rgba16.pal"
-};
-
-Texture saul_mario_eyes_closed_rgba16_ci8[] = {
-	#include "actors/saul/mario_eyes_closed.rgba16.ci8.inc.c"
-};
-
-Texture saul_mario_eyes_closed_rgba16_pal_rgba16[] = {
-	#include "actors/saul/mario_eyes_closed.rgba16.pal"
-};
-
-Texture saul_mario_eyes_left_unused_rgba16_ci8[] = {
-	#include "actors/saul/mario_eyes_left_unused.rgba16.ci8.inc.c"
-};
-
-Texture saul_mario_eyes_left_unused_rgba16_pal_rgba16[] = {
-	#include "actors/saul/mario_eyes_left_unused.rgba16.pal"
-};
-
-Texture saul_mario_eyes_right_unused_rgba16_ci8[] = {
-	#include "actors/saul/mario_eyes_right_unused.rgba16.ci8.inc.c"
-};
-
-Texture saul_mario_eyes_right_unused_rgba16_pal_rgba16[] = {
-	#include "actors/saul/mario_eyes_right_unused.rgba16.pal"
-};
-
-Texture saul_mario_eyes_up_unused_rgba16_ci8[] = {
-	#include "actors/saul/mario_eyes_up_unused.rgba16.ci8.inc.c"
-};
-
-Texture saul_mario_eyes_up_unused_rgba16_pal_rgba16[] = {
-	#include "actors/saul/mario_eyes_up_unused.rgba16.pal"
-};
-
-Texture saul_mario_eyes_down_unused_rgba16_ci8[] = {
-	#include "actors/saul/mario_eyes_down_unused.rgba16.ci8.inc.c"
-};
-
-Texture saul_mario_eyes_down_unused_rgba16_pal_rgba16[] = {
-	#include "actors/saul/mario_eyes_down_unused.rgba16.pal"
-};
-
-Texture saul_mario_eyes_dead_rgba16_ia8[] = {
-	#include "actors/saul/mario_eyes_dead.rgba16.ia8.inc.c"
 };
 
 Texture saul_WingFull_ia8[] = {
@@ -334,9 +246,9 @@ Gfx saul_Torso_skinned_mesh_layer_4_tri_0[] = {
 };
 
 Vtx saul_Torso_mesh_layer_4_vtx_0[3] = {
-	{{{5, 98, -1}, 0, {496, 496}, {0x02, 0x7F, 0x00, 0xFF}}},
-	{{{4, 62, -91}, 0, {-16, 496}, {0x02, 0x76, 0xD1, 0xFF}}},
-	{{{4, 62, 90}, 0, {1008, 496}, {0x02, 0x76, 0x2F, 0xFF}}},
+	{{{5, 98, -1}, 0, {496, 496}, {0x0E, 0x7E, 0x00, 0xFF}}},
+	{{{4, 62, -91}, 0, {-16, 496}, {0x0D, 0x75, 0xD1, 0xFF}}},
+	{{{4, 62, 90}, 0, {1008, 496}, {0x0D, 0x75, 0x2F, 0xFF}}},
 };
 
 Gfx saul_Torso_mesh_layer_4_tri_0[] = {
@@ -347,12 +259,12 @@ Gfx saul_Torso_mesh_layer_4_tri_0[] = {
 };
 
 Vtx saul_Torso_mesh_layer_4_vtx_1[6] = {
-	{{{4, 62, -91}, 0, {-16, 496}, {0x02, 0x76, 0xD1, 0xFF}}},
-	{{{85, 97, -1}, 0, {496, -16}, {0x02, 0x7F, 0x00, 0xFF}}},
-	{{{84, 61, -91}, 0, {-16, -16}, {0x02, 0x76, 0xD1, 0xFF}}},
-	{{{5, 98, -1}, 0, {496, 496}, {0x02, 0x7F, 0x00, 0xFF}}},
-	{{{4, 62, 90}, 0, {1008, 496}, {0x02, 0x76, 0x2F, 0xFF}}},
-	{{{84, 61, 90}, 0, {1008, -16}, {0x02, 0x76, 0x2F, 0xFF}}},
+	{{{4, 62, -91}, 0, {-16, 496}, {0x0D, 0x75, 0xD1, 0xFF}}},
+	{{{85, 82, -1}, 0, {496, -16}, {0x1A, 0x7C, 0x00, 0xFF}}},
+	{{{84, 46, -91}, 0, {-16, -16}, {0x18, 0x74, 0xD1, 0xFF}}},
+	{{{5, 98, -1}, 0, {496, 496}, {0x0E, 0x7E, 0x00, 0xFF}}},
+	{{{4, 62, 90}, 0, {1008, 496}, {0x0D, 0x75, 0x2F, 0xFF}}},
+	{{{84, 46, 90}, 0, {1008, -16}, {0x18, 0x74, 0x2E, 0xFF}}},
 };
 
 Gfx saul_Torso_mesh_layer_4_tri_1[] = {
@@ -1940,29 +1852,21 @@ Gfx mat_revert_saul_shirt[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_saul_Metal__CAP_[] = {
+Gfx mat_saul_saulmetal[] = {
 	gsSPSetGeometryMode(G_TEXTURE_GEN),
-	gsSPLight(&saul_Metal__CAP__lights.l, 1),
-    gsSPLight(&saul_Metal__CAP__lights.a, 2),
-    gsSPCopyLightEXT(2, 15),
 	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT, TEXEL0, 0, SHADE, TEXEL1, 0, 0, 0, ENVIRONMENT),
+	gsDPSetCombineLERP(0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT, 0, 0, 0, TEXEL0, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
-	gsSPTexture(4032, 1984, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, saul_Metal_Shade_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(0, 0, 0, 252, 124),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 1, saul_Metal_Light_rgba16_rgba16),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b_LOAD_BLOCK, 0, 512, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(6, 0, 0, 2047, 128),
-	gsDPSetTile(G_IM_FMT_RGBA, G_IM_SIZ_16b, 16, 512, 1, 0, G_TX_WRAP | G_TX_NOMIRROR, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
-	gsDPSetTileSize(1, 0, 0, 252, 124),
+	gsSPTexture(4032, 4032, 0, 0, 1),
+	gsDPSetTextureImage(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 1, saul_nephew_metal_rgba16_i8),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
+	gsDPLoadBlock(7, 0, 0, 2047, 256),
+	gsDPSetTile(G_IM_FMT_I, G_IM_SIZ_8b, 8, 0, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0, G_TX_WRAP | G_TX_NOMIRROR, 6, 0),
+	gsDPSetTileSize(0, 0, 0, 252, 252),
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_saul_Metal__CAP_[] = {
+Gfx mat_revert_saul_saulmetal[] = {
 	gsSPClearGeometryMode(G_TEXTURE_GEN),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
@@ -2290,176 +2194,6 @@ Gfx mat_revert_saul_skin[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_saul_Half_Closed_Eyes__SKIN_[] = {
-	gsSPSetLights1(saul_Half_Closed_Eyes__SKIN__lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsDPSetTextureLUT(G_TT_RGBA16),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, saul_mario_eyes_half_closed_rgba16_pal_rgba16),
-	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadTLUTCmd(5, 101),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, saul_mario_eyes_half_closed_rgba16_ci8),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_saul_Half_Closed_Eyes__SKIN_[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsDPSetTextureLUT(G_TT_NONE),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_saul_Closed_Eyes__SKIN_[] = {
-	gsSPSetLights1(saul_Closed_Eyes__SKIN__lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsDPSetTextureLUT(G_TT_RGBA16),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, saul_mario_eyes_closed_rgba16_pal_rgba16),
-	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadTLUTCmd(5, 18),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, saul_mario_eyes_closed_rgba16_ci8),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_saul_Closed_Eyes__SKIN_[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsDPSetTextureLUT(G_TT_NONE),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_saul_Left_Eyes__SKIN_[] = {
-	gsSPSetLights1(saul_Left_Eyes__SKIN__lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsDPSetTextureLUT(G_TT_RGBA16),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, saul_mario_eyes_left_unused_rgba16_pal_rgba16),
-	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadTLUTCmd(5, 123),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, saul_mario_eyes_left_unused_rgba16_ci8),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_saul_Left_Eyes__SKIN_[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsDPSetTextureLUT(G_TT_NONE),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_saul_Right_Eyes__SKIN_[] = {
-	gsSPSetLights1(saul_Right_Eyes__SKIN__lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsDPSetTextureLUT(G_TT_RGBA16),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, saul_mario_eyes_right_unused_rgba16_pal_rgba16),
-	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadTLUTCmd(5, 124),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, saul_mario_eyes_right_unused_rgba16_ci8),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_saul_Right_Eyes__SKIN_[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsDPSetTextureLUT(G_TT_NONE),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_saul_Up_Eyes__SKIN_[] = {
-	gsSPSetLights1(saul_Up_Eyes__SKIN__lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsDPSetTextureLUT(G_TT_RGBA16),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, saul_mario_eyes_up_unused_rgba16_pal_rgba16),
-	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadTLUTCmd(5, 124),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, saul_mario_eyes_up_unused_rgba16_ci8),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_saul_Up_Eyes__SKIN_[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsDPSetTextureLUT(G_TT_NONE),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_saul_Down_Eyes__SKIN_[] = {
-	gsSPSetLights1(saul_Down_Eyes__SKIN__lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsDPSetTextureLUT(G_TT_RGBA16),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_RGBA, G_IM_SIZ_16b, 1, saul_mario_eyes_down_unused_rgba16_pal_rgba16),
-	gsDPSetTile(0, 0, 0, 256, 5, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadTLUTCmd(5, 109),
-	gsDPSetTextureImage(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 1, saul_mario_eyes_down_unused_rgba16_ci8),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_CI, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_saul_Down_Eyes__SKIN_[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsDPSetTextureLUT(G_TT_NONE),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_saul_Dead_Eyes__SKIN_[] = {
-	gsSPSetLights1(saul_Dead_Eyes__SKIN__lights),
-	gsDPPipeSync(),
-	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
-	gsDPSetAlphaDither(G_AD_NOISE),
-	gsSPTexture(65535, 65535, 0, 0, 1),
-	gsDPSetTextureImage(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 1, saul_mario_eyes_dead_rgba16_ia8),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b_LOAD_BLOCK, 0, 0, 7, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0, G_TX_WRAP | G_TX_NOMIRROR, 0, 0),
-	gsDPLoadBlock(7, 0, 0, 511, 512),
-	gsDPSetTile(G_IM_FMT_IA, G_IM_SIZ_8b, 4, 0, 0, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0, G_TX_CLAMP | G_TX_NOMIRROR, 5, 0),
-	gsDPSetTileSize(0, 0, 0, 124, 124),
-	gsSPEndDisplayList(),
-};
-
-Gfx mat_revert_saul_Dead_Eyes__SKIN_[] = {
-	gsDPPipeSync(),
-	gsDPSetAlphaDither(G_AD_DISABLE),
-	gsSPEndDisplayList(),
-};
-
 Gfx mat_saul_Wing_Base[] = {
 	gsSPClearGeometryMode(G_CULL_BACK),
 	gsDPPipeSync(),
@@ -2488,10 +2222,10 @@ Gfx saul_Butt_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Butt_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Butt_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Butt_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -2558,10 +2292,10 @@ Gfx saul_Torso_skinned_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Torso_skinned_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Torso_skinned_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Torso_skinned_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -2629,11 +2363,11 @@ Gfx saul_Torso_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Torso_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Torso_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Torso_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Torso_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -2708,10 +2442,10 @@ Gfx saul_Torso_skinned_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Torso_skinned_mesh_layer_4_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Torso_skinned_mesh_layer_4_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Torso_skinned_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -2779,11 +2513,11 @@ Gfx saul_Torso_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Torso_mesh_layer_4_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Torso_mesh_layer_4_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Torso_mesh_layer_4_tri_0),
 	gsSPDisplayList(saul_Torso_mesh_layer_4_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -2867,13 +2601,13 @@ Gfx saul_Head_DL_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Head_DL_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Head_DL_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Head_DL_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Head_DL_mesh_layer_1_tri_1),
 	gsSPDisplayList(saul_Head_DL_mesh_layer_1_tri_2),
 	gsSPDisplayList(saul_Head_DL_mesh_layer_1_tri_3),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -3012,10 +2746,10 @@ Gfx saul_Head_DL_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Head_DL_mesh_layer_4_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Head_DL_mesh_layer_4_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Head_DL_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -3085,11 +2819,11 @@ Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -3173,76 +2907,6 @@ Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_saule
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Half_Closed_Eyes__SKIN__9[] = {
-	gsSPDisplayList(mat_saul_hair),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hair),
-	gsSPDisplayList(mat_saul_skin),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_skin),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Closed_Eyes__SKIN__10[] = {
-	gsSPDisplayList(mat_saul_hair),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hair),
-	gsSPDisplayList(mat_saul_skin),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_skin),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Left_Eyes__SKIN__11[] = {
-	gsSPDisplayList(mat_saul_hair),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hair),
-	gsSPDisplayList(mat_saul_skin),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_skin),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Right_Eyes__SKIN__12[] = {
-	gsSPDisplayList(mat_saul_hair),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hair),
-	gsSPDisplayList(mat_saul_skin),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_skin),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Up_Eyes__SKIN__13[] = {
-	gsSPDisplayList(mat_saul_hair),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hair),
-	gsSPDisplayList(mat_saul_skin),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_skin),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Down_Eyes__SKIN__14[] = {
-	gsSPDisplayList(mat_saul_hair),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hair),
-	gsSPDisplayList(mat_saul_skin),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_skin),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_mat_override_Dead_Eyes__SKIN__15[] = {
-	gsSPDisplayList(mat_saul_hair),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hair),
-	gsSPDisplayList(mat_saul_skin),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_skin),
-	gsSPEndDisplayList(),
-};
-
 Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4[] = {
 	gsSPDisplayList(mat_saul_sauleyeopen),
 	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
@@ -3250,10 +2914,10 @@ Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -3313,55 +2977,6 @@ Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_saule
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Half_Closed_Eyes__SKIN__9[] = {
-	gsSPDisplayList(mat_saul_sauleyeopen),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_sauleyeopen),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Closed_Eyes__SKIN__10[] = {
-	gsSPDisplayList(mat_saul_sauleyeopen),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_sauleyeopen),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Left_Eyes__SKIN__11[] = {
-	gsSPDisplayList(mat_saul_sauleyeopen),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_sauleyeopen),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Right_Eyes__SKIN__12[] = {
-	gsSPDisplayList(mat_saul_sauleyeopen),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_sauleyeopen),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Up_Eyes__SKIN__13[] = {
-	gsSPDisplayList(mat_saul_sauleyeopen),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_sauleyeopen),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Down_Eyes__SKIN__14[] = {
-	gsSPDisplayList(mat_saul_sauleyeopen),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_sauleyeopen),
-	gsSPEndDisplayList(),
-};
-
-Gfx saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_mat_override_Dead_Eyes__SKIN__15[] = {
-	gsSPDisplayList(mat_saul_sauleyeopen),
-	gsSPDisplayList(saul_Capless_Head_Switch_Option_Capless_Head_mesh_layer_4_tri_0),
-	gsSPDisplayList(mat_revert_saul_sauleyeopen),
-	gsSPEndDisplayList(),
-};
-
 Gfx saul_Left_Wing_DL_mesh_layer_4[] = {
 	gsSPDisplayList(mat_saul_Wing_Base),
 	gsSPDisplayList(saul_Left_Wing_DL_mesh_layer_4_tri_0),
@@ -3369,7 +2984,7 @@ Gfx saul_Left_Wing_DL_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Left_Wing_DL_mesh_layer_4_mat_override_Metal__CAP__0[] = {
+Gfx saul_Left_Wing_DL_mesh_layer_4_mat_override_saulmetal_0[] = {
 	gsSPDisplayList(mat_saul_Wing_Base),
 	gsSPDisplayList(saul_Left_Wing_DL_mesh_layer_4_tri_0),
 	gsSPDisplayList(mat_revert_saul_Wing_Base),
@@ -3439,7 +3054,7 @@ Gfx saul_Right_Wing_DL_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Right_Wing_DL_mesh_layer_4_mat_override_Metal__CAP__0[] = {
+Gfx saul_Right_Wing_DL_mesh_layer_4_mat_override_saulmetal_0[] = {
 	gsSPDisplayList(mat_saul_Wing_Base),
 	gsSPDisplayList(saul_Right_Wing_DL_mesh_layer_4_tri_0),
 	gsSPDisplayList(mat_revert_saul_Wing_Base),
@@ -3512,11 +3127,11 @@ Gfx saul_Left_Hand_DL_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Left_Hand_DL_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Left_Hand_DL_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Left_Hand_DL_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Left_Hand_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -3610,11 +3225,11 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -3708,11 +3323,11 @@ Gfx saul_Right_Hand_DL_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Right_Hand_DL_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Right_Hand_DL_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Right_Hand_DL_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Right_Hand_DL_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -3806,11 +3421,11 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -3904,11 +3519,11 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -4002,11 +3617,11 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -4100,11 +3715,11 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = 
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_Metal__CAP__0[] = {
-	gsSPDisplayList(mat_saul_Metal__CAP_),
+Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_saulmetal_0[] = {
+	gsSPDisplayList(mat_saul_saulmetal),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
-	gsSPDisplayList(mat_revert_saul_Metal__CAP_),
+	gsSPDisplayList(mat_revert_saul_saulmetal),
 	gsSPEndDisplayList(),
 };
 
@@ -4195,7 +3810,7 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_mat_override_Metal__CAP__0[] = {
+Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_mat_override_saulmetal_0[] = {
 	gsSPDisplayList(mat_saul_Wing_Base),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Wings_mesh_layer_4_tri_0),
 	gsSPDisplayList(mat_revert_saul_Wing_Base),
