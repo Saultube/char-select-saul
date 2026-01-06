@@ -121,6 +121,60 @@ local PALETTE_SAUL = {
         [CAP]    = "B814A6",
     }
 
+    local PALETTE_SAUL_PLUMB = {
+        [PANTS]  = "412F85", --dont delete this color cuz its used in cs's paintbucket
+        [SHIRT]  = "B2CC66",
+        [GLOVES] = "FFFFFF",
+        [HAIR]   = "8E765A",
+        [SKIN]   = "FFDDA3",
+        [CAP]    = "B2CC66",
+    }
+
+    local PALETTE_ULTRA_SAUL = {
+        [PANTS]  = "000079",
+        [SHIRT]  = "bbff4d",
+        [GLOVES] = "ffd793",
+        [HAIR]   = "462c00",
+        [SKIN]   = "ffd793",
+        [CAP]    = "bbff4d",
+    }
+
+    local PALETTE_SAUL_MARCUS = {
+        [PANTS]  = "3d5e52",
+        [SHIRT]  = "ff3e00",
+        [GLOVES] = "fea279",
+        [HAIR]   = "6a1f0b",
+        [SKIN]   = "fea279",
+        [CAP]    = "ff3e00",
+    }
+
+    local PALETTE_EVIL_SAULD_UP = {
+        [PANTS]  = "5e5afe",
+        [SHIRT]  = "fe002a",
+        [GLOVES] = "FF0003",
+        [HAIR]   = "743F39",
+        [SKIN]   = "fefe84",
+        [CAP]    = "fe002a",
+    }
+
+    local PALETTE_SAUL_KRISTALL = {
+        [PANTS] = { r = 0x33, g = 0x39, b = 0x4d },
+        [SHIRT] = { r = 0x99, g = 0x75, b = 0xd4 },
+        [GLOVES] = { r = 0x99, g = 0x75, b = 0xd4 },
+        [HAIR] = { r = 0x09, g = 0x0c, b = 0x09 },
+        [SKIN] = { r = 0xff, g = 0xdc, b = 0xa8 },
+        [CAP] = { r = 0x99, g = 0x75, b = 0xd4 },
+    }
+
+    local PALETTE_SAUL_KAKTUS = {
+        [PANTS]  = "313149",
+        [SHIRT]  = "791E82",
+        [GLOVES] = "FF0003",
+        [HAIR]   = "743F39",
+        [SKIN]   = "DB9C70",
+        [CAP]    = "3E8948",
+    }
+
 -- MOVESET SHITS BELOW
 
 -- ACTIONS
@@ -185,8 +239,17 @@ if _G.charSelectExists then
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_EVIL_SAUL, "Evil")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAUL_JER, "Biker")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAULOTTE, "Chocolate Chip")
+
+    _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_PLUMB, "Plumber")
+    _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_ULTRA_SAUL, "Ultra Saul '94")
+    _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_MARCUS, "Pretty Mad")
+    _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_EVIL_SAULD_UP, "Evil Saul'd Up")
+    _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_KRISTALL, "Gemstone")
+    _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_KAKTUS, "Spiky")
+
     _G.charSelect.character_add_course_texture(CT_SAUL, COURSE_SAUL)
     _G.charSelect.character_add_voice(E_MODEL_SAUL, VOICETABLE_SAUL)
+    _G.charSelect.character_add_voice(E_MODEL_PLUMBSAUL, VOICETABLE_SAUL)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_MARIO_UPDATE, SaulFunction)
     _G.charSelect.character_add_graffiti(CT_SAUL, TEX_SAULGRAF)
     _G.charSelect.character_set_category(CT_SAUL, "DXA", true)
