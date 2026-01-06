@@ -19,6 +19,11 @@ for i = 0, MAX_PLAYERS - 1 do
     e.HasSaultwirled = false
 end
 
+local COURSE_SAUL = {
+    top = get_texture_info("saulcoursetop"),
+    bottom = get_texture_info("saulcoursebottom"),
+}
+
 local VOICETABLE_SAUL = {
     [CHAR_SOUND_ATTACKED] = 'SAUL_SOUND_ATTACKED.ogg',
     [CHAR_SOUND_DOH] = 'SAUL_SOUND_DOH.ogg',
@@ -177,6 +182,7 @@ if _G.charSelectExists then
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_EVIL_SAUL, "Evil")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAUL_JER, "Jer")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAULOTTE, "Charlotte")
+    _G.charSelect.character_add_course_texture(CT_SAUL, COURSE_SAUL)
     _G.charSelect.character_add_voice(E_MODEL_SAUL, VOICETABLE_SAUL)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_MARIO_UPDATE, SaulFunction)
     _G.charSelect.character_add_graffiti(CT_SAUL, TEX_SAULGRAF)
