@@ -230,6 +230,12 @@ local e = gStateExtras[m.playerIndex]
         e.HasSaultwirled = false
     end
 end
+function before_set_saul_action(m, inc)
+local e = gStateExtras[m.playerIndex]
+if inc == ACT_DIVE and m.controller.buttonDown & A_BUTTON ~= 0 and m.action == ACT_WALKING then
+    return ACT_JUMP_KICK
+end
+end
 
 if _G.charSelectExists then
     CT_SAUL =_G.charSelect.character_add("Saul", "New Saul Remodel #8", "Saul, Kaktus", {r = 178, g = 204, b = 102}, E_MODEL_SAUL, CT_MARIO, TEX_SAULICON, 1.2)
@@ -256,6 +262,7 @@ if _G.charSelectExists then
     _G.charSelect.character_add_voice(E_MODEL_SAUL, VOICETABLE_SAUL)
     _G.charSelect.character_add_voice(E_MODEL_PLUMBSAUL, VOICETABLE_SAUL)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_MARIO_UPDATE, SaulFunction)
+    _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_BEFORE_SET_MARIO_ACTION, before_set_saul_action)
     _G.charSelect.character_add_graffiti(CT_SAUL, TEX_SAULGRAF)
     _G.charSelect.character_set_category(CT_SAUL, "DXA", true)
 else
