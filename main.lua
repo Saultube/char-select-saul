@@ -12,6 +12,23 @@ local TEXT_MOD_NAME = "Saul"
 
 local SAUL_TWIRL = audio_sample_load("saulsfucklintworl.mp3") -- saul twirl sfx
 
+local HEALTH_SAUL = {
+    label = {
+        left = get_texture_info("saulHMleft"),
+        right = get_texture_info("saulHMright"),
+    },
+    pie = {
+        [1] = get_texture_info("char_select_custom_meter_pie1"),
+        [2] = get_texture_info("char_select_custom_meter_pie2"),
+        [3] = get_texture_info("char_select_custom_meter_pie3"),
+        [4] = get_texture_info("char_select_custom_meter_pie4"),
+        [5] = get_texture_info("char_select_custom_meter_pie5"),
+        [6] = get_texture_info("char_select_custom_meter_pie6"),
+        [7] = get_texture_info("char_select_custom_meter_pie7"),
+        [8] = get_texture_info("char_select_custom_meter_pie8"),
+    }
+}
+
 local gStateExtras = {}
 for i = 0, MAX_PLAYERS - 1 do
     gStateExtras[i] = {}
@@ -266,6 +283,7 @@ if inc == ACT_BUTT_SLIDE_STOP then
     return ACT_IDLE
 end
 if inc == ACT_GROUND_POUND then
+    play_character_sound(m, CHAR_SOUND_GROUND_POUND_WAH)
     return ACT_SAUL_POUND
 end
 end
@@ -305,6 +323,7 @@ if _G.charSelectExists then
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_BEFORE_SET_MARIO_ACTION, before_set_saul_action)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_ON_SET_MARIO_ACTION, on_set_saul_action)
     _G.charSelect.character_add_graffiti(CT_SAUL, TEX_SAULGRAF)
+    _G.charSelect.character_add_health_meter(CT_SAUL, HEALTH_SAUL)
     _G.charSelect.character_set_category(CT_SAUL, "DXA", true)
 else
     djui_popup_create("\\#ffffdc\\\n"..TEXT_MOD_NAME.."\nwhat the fuck? \n\nPlease turn off the Character Select Mod\nand Restart the Room!", 6)
