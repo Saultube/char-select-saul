@@ -4,9 +4,14 @@
 local E_MODEL_SAUL = smlua_model_util_get_id("saul_geo")
 local E_MODEL_PLUMBSAUL = smlua_model_util_get_id("saulplumb_geo")
 
+local E_MODEL_SAULCOIN = smlua_model_util_get_id("saulcoin_geo")
+local E_MODEL_RED_SAULCOIN = smlua_model_util_get_id("saulred_coin_geo")
+local E_MODEL_BLUE_SAULCOIN = smlua_model_util_get_id("saul_blue_coin_geo")
+
 local TEX_SAULICON = get_texture_info("saulicon")
 local TEX_SAULPLUBBERICON = get_texture_info("plumbersaulicon")
 local TEX_SAULGRAF = get_texture_info("saulgraf")
+local TEX_SAULHEALTHICONS = get_texture_info("saulhudicons")
 
 local TEXT_MOD_NAME = "Saul"
 
@@ -295,6 +300,54 @@ function on_set_saul_action(m)
     end
 end
 
+local curanimframe = 0
+local curanimframeother = 0
+
+function theSaulFunctionName(i)
+    if math.floor(curanimframe + i) * 16 > 112 then
+        return math.floor((curanimframe - 8) + i) * 16
+    else
+        return math.floor(curanimframe + i) * 16
+    end
+end
+
+function theSaulFunctionNameForOtherPlayers(i)
+    if math.floor(curanimframeother + i) * 16 > 112 then
+        return math.floor((curanimframeother - 8) + i) * 16
+    else
+        return math.floor(curanimframeother + i) * 16
+    end
+end
+
+function healthmeterfunc(localIndex, health, prevX, prevY, prevScaleX, prevScaleY, x, y, scaleX, scaleY)
+    if localIndex == 0 then
+        local squares = health >> 8
+        curanimframe = curanimframe + 0.2
+
+        if curanimframe > 7 then
+            curanimframe = -1
+        end
+
+        djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, 18, 180 + math.abs(y), 0.36, 1, 0, 16, 48, 16)
+        
+        for i = 1, squares do
+            djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, 22 + ((i - 1) * 17), 196 + (i - 1) + math.abs(y), 1, 1, theSaulFunctionName(i), 0, 16, 16)
+        end
+    else
+        local squares = health >> 8
+        curanimframeother = curanimframeother + 0.2
+
+        if curanimframeother > 7 then
+            curanimframeother = -1
+        end
+        djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, prevX + 18, prevY, (prevScaleX / 64) / 3, prevScaleY / 64, 0, 16, 48, 16)
+        
+        for i = 1, squares do
+            djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, prevX + 22 + ((i - 1) * prevScaleX / 4), prevY, prevScaleX / 64, prevScaleY / 64, theSaulFunctionNameForOtherPlayers(i), 0, 16, 16)
+        end
+    end
+end
+
 if _G.charSelectExists then
     CT_SAUL =_G.charSelect.character_add("Saul", "New Saul Remodel #8", "Saul, Kaktus", {r = 178, g = 204, b = 102}, E_MODEL_SAUL, CT_MARIO, TEX_SAULICON, 1.2)
     _G.charSelect.character_add_costume(CT_SAUL, "Plumber Saul", "Saul but mildly more racist", "Saul, Kaktus", {r = 65, g = 47, b = 133}, E_MODEL_PLUMBSAUL, CT_MARIO, TEX_SAULPLUBBERICON, 1.2)
@@ -316,6 +369,12 @@ if _G.charSelectExists then
     _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_KRISTALL, "Gemstone")
     _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_KAKTUS, "Spiky")
 
+    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvOneCoin, E_MODEL_SAULCOIN)
+    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvTemporaryYellowCoin, E_MODEL_SAULCOIN)
+    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvRedCoin, E_MODEL_RED_SAULCOIN)
+    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvYellowCoin, E_MODEL_SAULCOIN)
+    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvHiddenBlueCoin, E_MODEL_BLUE_SAULCOIN)
+    
     _G.charSelect.character_add_course_texture(CT_SAUL, COURSE_SAUL)
     _G.charSelect.character_add_voice(E_MODEL_SAUL, VOICETABLE_SAUL)
     _G.charSelect.character_add_voice(E_MODEL_PLUMBSAUL, VOICETABLE_SAUL)
@@ -323,7 +382,8 @@ if _G.charSelectExists then
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_BEFORE_SET_MARIO_ACTION, before_set_saul_action)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_ON_SET_MARIO_ACTION, on_set_saul_action)
     _G.charSelect.character_add_graffiti(CT_SAUL, TEX_SAULGRAF)
-    _G.charSelect.character_add_health_meter(CT_SAUL, HEALTH_SAUL)
+    --_G.charSelect.character_add_health_meter(CT_SAUL, HEALTH_SAUL)
+    _G.charSelect.character_add_health_meter(CT_SAUL, healthmeterfunc)
     _G.charSelect.character_set_category(CT_SAUL, "DXA", true)
 else
     djui_popup_create("\\#ffffdc\\\n"..TEXT_MOD_NAME.."\nwhat the fuck? \n\nPlease turn off the Character Select Mod\nand Restart the Room!", 6)
