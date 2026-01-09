@@ -203,6 +203,7 @@ local PALETTE_SAUL = {
 -- ACTIONS
 ACT_SAUL_TWIRL = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 ACT_SAUL_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
+ACT_SAUL_FLING = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 
 function act_saul_twirl(m)
     local e = gStateExtras[m.playerIndex]
@@ -242,6 +243,21 @@ function act_saul_pound(m)
 end
 hook_mario_action(ACT_SAUL_POUND, act_saul_pound)
 
+function act_saul_fling(m)
+    local e = gStateExtras[m.playerIndex]
+    local stepResult = common_air_action_step(m, ACT_DIVE_SLIDE, CHAR_ANIM_FLY_FROM_CANNON, AIR_STEP_NONE)
+    e.rotAngle = e.rotAngle + 7500
+    m.marioObj.header.gfx.angle.x = e.rotAngle
+    m.marioBodyState.eyeState = MARIO_EYES_LOOK_DOWN
+    m.actionTimer = m.actionTimer + 1
+    m.forwardVel = 65
+    if m.actionTimer > 10 and (m.flags & MARIO_WING_CAP) ~= 0 then
+        set_mario_action(m, ACT_FLYING_TRIPLE_JUMP, 0)
+        m.vel.y = 0
+    end
+end
+hook_mario_action(ACT_SAUL_FLING, act_saul_fling)
+
 
 saultwirltable = { -- saul twirl table
     [ACT_JUMP] = true,
@@ -274,8 +290,23 @@ local e = gStateExtras[m.playerIndex]
         set_mario_action(m, ACT_SAUL_TWIRL, 0)
         audio_sample_play(SAUL_TWIRL, m.pos, get_volume_sfx() / 76)
     end
+    --super saul fling!!!!!!!!!!!!!! - kaktus
+    if m.input & INPUT_A_PRESSED ~= 0 and m.action == ACT_GROUND_POUND_LAND then
+        play_sound(SOUND_GENERAL_BOING2, m.marioObj.header.gfx.cameraToObject)
+        m.forwardVel = 65
+        set_mario_action(m, ACT_SAUL_FLING, 0)
+        m.vel.y = 60
+        if (m.flags & MARIO_WING_CAP) == 0 then
+            play_character_sound(m, CHAR_SOUND_YAHOO)
+        end
+    end
     if m.pos.y == m.floorHeight then
         e.HasSaultwirled = false
+    end
+    if m.action == ACT_GROUND_POUND_LAND then
+        m.marioObj.header.gfx.scale.y = 0.9
+        m.marioObj.header.gfx.scale.x = 1.2
+        m.marioObj.header.gfx.scale.z = 1.2
     end
 end
 
@@ -295,8 +326,9 @@ end
 
 function on_set_saul_action(m)
     if m.action == ACT_GROUND_POUND_LAND then
-       play_sound(SOUND_ACTION_METAL_BONK, m.pos)
+       play_sound(SOUND_ACTION_METAL_BONK, m.marioObj.header.gfx.cameraToObject)
        spawn_mist_from_global()
+       set_mario_particle_flags(m, PARTICLE_HORIZONTAL_STAR, 0)
     end
 end
 
