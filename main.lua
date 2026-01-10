@@ -380,6 +380,16 @@ function healthmeterfunc(localIndex, health, prevX, prevY, prevScaleX, prevScale
     end
 end
 
+function geo_saul_eye_states(n)
+    local node = cast_graph_node(n)
+    local m = gMarioStates[0]
+    if m.marioBodyState.eyeState == 0 then
+        node.selectedCase = math.random(-16, 2)
+    else
+        node.selectedCase = m.marioBodyState.eyeState - 1
+    end
+end
+
 if _G.charSelectExists then
     CT_SAUL =_G.charSelect.character_add("Saul", "New Saul Remodel #8", "Saul, Kaktus", {r = 178, g = 204, b = 102}, E_MODEL_SAUL, CT_MARIO, TEX_SAULICON, 1.2)
     _G.charSelect.character_add_costume(CT_SAUL, "Plumber Saul", "Saul but mildly more racist", "Saul, Kaktus", {r = 65, g = 47, b = 133}, E_MODEL_PLUMBSAUL, CT_MARIO, TEX_SAULPLUBBERICON, 1.2)

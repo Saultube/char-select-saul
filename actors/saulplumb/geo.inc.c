@@ -1646,7 +1646,7 @@ const GeoLayout saulplumb_7_LoD_Switch__Unused__opt0_Cap_State_Switch_opt1_Eye_S
 const GeoLayout saulplumb_7_LoD_Switch__Unused__opt0_Cap_State_Switch_opt1[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
+		GEO_SWITCH_CASE(0, geo_saul_eye_states),
 		GEO_OPEN_NODE(),
 			GEO_NODE_START(),
 			GEO_OPEN_NODE(),
@@ -1852,7 +1852,7 @@ const GeoLayout saulplumb_7_LoD_Switch__Unused__opt0_Cap_State_Switch_opt2_jump_
 const GeoLayout saulplumb_7_LoD_Switch__Unused__opt0_Cap_State_Switch_opt2[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
+		GEO_SWITCH_CASE(0, geo_saul_eye_states),
 		GEO_OPEN_NODE(),
 			GEO_NODE_START(),
 			GEO_OPEN_NODE(),
@@ -2050,7 +2050,7 @@ const GeoLayout saulplumb_7_LoD_Switch__Unused__opt0_Cap_State_Switch_opt3_jump_
 const GeoLayout saulplumb_7_LoD_Switch__Unused__opt0_Cap_State_Switch_opt3[] = {
 	GEO_NODE_START(),
 	GEO_OPEN_NODE(),
-		GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
+		GEO_SWITCH_CASE(0, geo_saul_eye_states),
 		GEO_OPEN_NODE(),
 			GEO_NODE_START(),
 			GEO_OPEN_NODE(),
@@ -3747,7 +3747,7 @@ const GeoLayout saulplumb_geo[] = {
 						GEO_OPEN_NODE(),
 							GEO_NODE_START(),
 							GEO_OPEN_NODE(),
-								GEO_SWITCH_CASE(0, geo_switch_mario_eyes),
+								GEO_SWITCH_CASE(0, geo_saul_eye_states),
 								GEO_OPEN_NODE(),
 									GEO_NODE_START(),
 									GEO_OPEN_NODE(),

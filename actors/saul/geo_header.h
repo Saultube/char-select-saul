@@ -186,7 +186,7 @@ extern Vtx saul_Torso_mesh_layer_4_vtx_0[3];
 extern Gfx saul_Torso_mesh_layer_4_tri_0[];
 extern Vtx saul_Torso_mesh_layer_4_vtx_1[6];
 extern Gfx saul_Torso_mesh_layer_4_tri_1[];
-extern Vtx saul_Head_DL_mesh_layer_1_vtx_0[40];
+extern Vtx saul_Head_DL_mesh_layer_1_vtx_0[39];
 extern Gfx saul_Head_DL_mesh_layer_1_tri_0[];
 extern Vtx saul_Head_DL_mesh_layer_1_vtx_1[45];
 extern Gfx saul_Head_DL_mesh_layer_1_tri_1[];
