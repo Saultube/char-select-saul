@@ -372,11 +372,31 @@ function healthmeterfunc(localIndex, health, prevX, prevY, prevScaleX, prevScale
         if curanimframeother > 7 then
             curanimframeother = -1
         end
-        djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, prevX + 18, prevY, (prevScaleX / 64) / 3, prevScaleY / 64, 0, 16, 48, 16)
+        djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, ((prevX + 18) + ((prevScaleY / 64) * 44)) - ((prevScaleY / 64) * 64), (prevY) + ((prevScaleY / 64) * 24), (prevScaleX / 64) / 3, prevScaleY / 64, 0, 16, 48, 16)
         
         for i = 1, squares do
-            djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, prevX + 22 + ((i - 1) * prevScaleX / 4), prevY, prevScaleX / 64, prevScaleY / 64, theSaulFunctionNameForOtherPlayers(i), 0, 16, 16)
+            djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, (prevX + 22 + ((i - 1) * prevScaleX / 4)) - ((prevScaleY / 64) * 64), (prevY + ((prevScaleY / 64) * 17)) + ((prevScaleY / 64) * 24), prevScaleX / 64, prevScaleY / 64, theSaulFunctionNameForOtherPlayers(i), 0, 16, 16)
         end
+    end
+end
+
+local TEXTURE_SAUL_ENDING = get_texture_info("saulendingscreen")
+local AlphaVar = 255
+
+function saulendinggender()
+    if gNetworkPlayers[0].currLevelNum == LEVEL_ENDING then
+
+        AlphaVar = AlphaVar - 1.5
+
+        if AlphaVar < 1 then
+            AlphaVar = 1
+        end
+
+        djui_hud_set_color(255, 255, 255, 255)
+        djui_hud_render_texture(TEXTURE_SAUL_ENDING, 0, 0, djui_hud_get_screen_width() / 256, djui_hud_get_screen_height() / 256)
+
+        djui_hud_set_color(0, 0, 0, AlphaVar)
+        djui_hud_render_rect(-2, -2, djui_hud_get_screen_width() * 2, djui_hud_get_screen_height() * 2)
     end
 end
 
@@ -396,6 +416,7 @@ if _G.charSelectExists then
     
     _G.charSelect.character_add_animations(E_MODEL_SAUL, ANIMTABLE_SAUL)
     _G.charSelect.character_add_animations(E_MODEL_PLUMBSAUL, ANIMTABLE_SAUL)
+
 
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAUL, "Saul")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_CRAIG, "Craig")
@@ -423,6 +444,7 @@ if _G.charSelectExists then
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_MARIO_UPDATE, SaulFunction)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_BEFORE_SET_MARIO_ACTION, before_set_saul_action)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_ON_SET_MARIO_ACTION, on_set_saul_action)
+    _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_ON_HUD_RENDER, saulendinggender)
     _G.charSelect.character_add_graffiti(CT_SAUL, TEX_SAULGRAF)
     --_G.charSelect.character_add_health_meter(CT_SAUL, HEALTH_SAUL)
     _G.charSelect.character_add_health_meter(CT_SAUL, healthmeterfunc)
