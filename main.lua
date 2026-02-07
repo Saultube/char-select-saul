@@ -153,12 +153,14 @@ local PALETTE_SAUL = {
     }
 
     local PALETTE_SAUL_MARCUS = {
-        [PANTS]  = "3d5e52",
-        [SHIRT]  = "ff3e00",
-        [GLOVES] = "fea279",
-        [HAIR]   = "6a1f0b",
-        [SKIN]   = "fea279",
-        [CAP]    = "ff3e00",
+        [PANTS]  = "264A34",
+        [SHIRT]  = "E13A00",
+        [GLOVES] = "FFFFFF",
+        [SHOES]  = "0A1419",
+        [HAIR]   = "3E0F0C",
+        [SKIN]   = "FFB184" ,
+        [CAP]    = "E13A00",
+        [EMBLEM] = "000000"
     }
 
     local PALETTE_EVIL_SAULD_UP = {
