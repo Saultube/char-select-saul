@@ -374,10 +374,11 @@ function healthmeterfunc(localIndex, health, prevX, prevY, prevScaleX, prevScale
         if curanimframeother > 7 then
             curanimframeother = -1
         end
-        djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, ((prevX + 18) + ((prevScaleY / 64) * 44)) - ((prevScaleY / 64) * 64), (prevY) + ((prevScaleY / 64) * 24), (prevScaleX / 64) / 3, prevScaleY / 64, 0, 16, 48, 16)
-        
+
+        djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, prevX, prevY + ((8 / 32) * prevScaleY), (prevScaleX / 2.85) / 48, (prevScaleY) / 48, 0, 16, 48, 16)
+
         for i = 1, squares do
-            djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, (prevX + 22 + ((i - 1) * prevScaleX / 4)) - ((prevScaleY / 64) * 64), (prevY + ((prevScaleY / 64) * 17)) + ((prevScaleY / 64) * 24), prevScaleX / 64, prevScaleY / 64, theSaulFunctionNameForOtherPlayers(i), 0, 16, 16)
+            djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, (prevX + (((i * 12) / 32) * prevScaleX)) - ((42 / 32) * prevScaleX), prevY + ((20 / 32) * prevScaleY), prevScaleX / 48, prevScaleY / 48, theSaulFunctionNameForOtherPlayers(i), 0, 16, 16)
         end
     end
 end
