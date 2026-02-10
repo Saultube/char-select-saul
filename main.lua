@@ -198,6 +198,7 @@ local PALETTE_SAUL = {
         [CHAR_ANIM_IDLE_HEAD_LEFT]       = 'saulidle',
         [CHAR_ANIM_IDLE_HEAD_RIGHT]      = 'saulidle',
         [CHAR_ANIM_FIRST_PERSON]         = 'saulidle',
+        [CHAR_ANIM_SINGLE_JUMP]          = 'sauljump',
     }
 
 -- MOVESET SHITS BELOW
