@@ -244,6 +244,34 @@ end
 
 hook_mario_action(ACT_JARED_WALKING, { every_frame = act_jared_walking, gravity = nil } )
 
+local function fix_interactions(m, obj, interactType)
+    if (m.action == ACT_JARED_WALKING) then
+        if (interactType == INTERACT_WARP_DOOR) then
+            m.action = ACT_WALKING
+            local interaction = interact_warp_door(m, INTERACT_WARP_DOOR, obj)
+            if (interaction == 0 and m.action ~= ACT_READING_AUTOMATIC_DIALOG) then
+                m.action = ACT_JARED_WALKING
+            end
+        end
+        if (interactType == INTERACT_DOOR) then
+            m.action = ACT_WALKING
+            local interaction = interact_door(m, INTERACT_DOOR, obj)
+            if (interaction == 0 and m.action ~= ACT_READING_AUTOMATIC_DIALOG) then
+                m.action = ACT_JARED_WALKING
+            end
+        end
+        if (interactType == INTERACT_KOOPA_SHELL) then
+            m.action = ACT_WALKING
+            local interaction = interact_koopa_shell(m, INTERACT_KOOPA_SHELL, obj)
+            if (interaction == 0) then
+                m.action = ACT_JARED_WALKING
+            end
+        end
+    end
+end
+
+hook_event(HOOK_ALLOW_INTERACT, fix_interactions)
+
 function act_saul_twirl(m)
     local e = gStateExtras[m.playerIndex]
     common_air_action_step(m, ACT_JUMP_LAND, CHAR_ANIM_TWIRL, AIR_STEP_CHECK_LEDGE_GRAB)
