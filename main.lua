@@ -4,10 +4,6 @@
 local E_MODEL_SAUL = smlua_model_util_get_id("saul_geo")
 local E_MODEL_PLUMBSAUL = smlua_model_util_get_id("saulplumb_geo")
 
-local E_MODEL_SAULCOIN = smlua_model_util_get_id("saulcoin_geo")
-local E_MODEL_RED_SAULCOIN = smlua_model_util_get_id("saulred_coin_geo")
-local E_MODEL_BLUE_SAULCOIN = smlua_model_util_get_id("saul_blue_coin_geo")
-
 local TEX_SAULICON = get_texture_info("saulicon")
 local TEX_SAULPLUBBERICON = get_texture_info("plumbersaulicon")
 local TEX_SAULGRAF = get_texture_info("saulgraf")
@@ -205,8 +201,48 @@ local PALETTE_SAUL = {
 
 -- ACTIONS
 ACT_SAUL_TWIRL = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
-ACT_SAUL_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
-ACT_SAUL_FLING = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
+ACT_SAUL_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_DIVING)
+ACT_SAUL_FLING = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_DIVING)
+ACT_JARED_WALKING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_ALLOW_FIRST_PERSON | ACT_FLAG_MOVING | ACT_FLAG_CUSTOM_ACTION) --stealing this from jaredfan lmfao
+
+function act_jared_walking(m)
+    if (should_begin_sliding(m)) ~= 0 then
+        return set_mario_action(m, ACT_BEGIN_SLIDING, 0);
+    end
+
+    if (m.input & INPUT_A_PRESSED) ~= 0 then
+        return set_jumping_action(m, ACT_JUMP, 0);
+    end
+
+    if (check_ground_dive_or_punch(m) ~= 0) then
+        return 1;
+    end
+
+    if (m.input & INPUT_ZERO_MOVEMENT) ~= 0 then
+        begin_braking_action(m);
+    end
+
+    if (m.input & INPUT_Z_PRESSED) ~= 0 then
+        return drop_and_set_mario_action(m, ACT_CROUCH_SLIDE, 0);
+    end
+
+    mario_drop_held_object(m);
+
+    update_walking_speed(m);
+
+    set_mario_animation(m, MARIO_ANIM_RUNNING)
+
+    m.marioObj.header.gfx.animInfo.animAccel = (m.forwardVel * 20000)
+
+    local stepResult = perform_ground_step(m)
+    if stepResult == GROUND_STEP_LEFT_GROUND then
+        set_mario_action(m, ACT_FREEFALL, 0);
+    end
+
+    return false;
+end
+
+hook_mario_action(ACT_JARED_WALKING, { every_frame = act_jared_walking, gravity = nil } )
 
 function act_saul_twirl(m)
     local e = gStateExtras[m.playerIndex]
@@ -216,6 +252,7 @@ function act_saul_twirl(m)
     m.marioObj.header.gfx.angle.y = e.rotAngle
     m.actionTimer = m.actionTimer + 1
     m.vel.y = m.vel.y / 1.8
+    
     if m.actionTimer > 7 then
     m.action = ACT_FREEFALL
     e.HasSaultwirled = true
@@ -237,7 +274,7 @@ function act_saul_pound(m)
 
     if m.input & INPUT_B_PRESSED ~= 0 then
         m.faceAngle.y = m.intendedYaw
-        set_mario_action(m, ACT_DIVE, 0)
+        set_mario_action(m, ACT_VERTICAL_WIND, 0)
         m.vel.y = 30
     end
 
@@ -253,7 +290,7 @@ function act_saul_fling(m)
     m.marioObj.header.gfx.angle.x = e.rotAngle
     m.marioBodyState.eyeState = MARIO_EYES_LOOK_DOWN
     m.actionTimer = m.actionTimer + 1
-    m.forwardVel = 65
+    m.faceAngle.y = m.intendedYaw - approach_s32(math.s16(m.intendedYaw - m.faceAngle.y), 0, 0x040, 0x040)
     if m.actionTimer > 10 and (m.flags & MARIO_WING_CAP) ~= 0 then
         set_mario_action(m, ACT_FLYING_TRIPLE_JUMP, 0)
         m.vel.y = 0
@@ -314,17 +351,28 @@ local e = gStateExtras[m.playerIndex]
 end
 
 function before_set_saul_action(m, inc)
-local e = gStateExtras[m.playerIndex]
-if inc == ACT_DIVE and m.controller.buttonDown & A_BUTTON ~= 0 and m.action == ACT_WALKING then
-    return ACT_JUMP_KICK
-end
-if inc == ACT_BUTT_SLIDE_STOP then
-    return ACT_IDLE
-end
-if inc == ACT_GROUND_POUND then
-    play_character_sound(m, CHAR_SOUND_GROUND_POUND_WAH)
-    return ACT_SAUL_POUND
-end
+    local e = gStateExtras[m.playerIndex]
+
+    if inc == ACT_WALKING then
+        return ACT_JARED_WALKING
+    end
+
+    if inc == ACT_DIVE and m.controller.buttonDown & A_BUTTON ~= 0 and m.action == ACT_WALKING then
+
+        return ACT_JUMP_KICK
+
+    end
+    if inc == ACT_BUTT_SLIDE_STOP then
+
+        return ACT_IDLE
+
+    end
+    if inc == ACT_GROUND_POUND then
+        
+        play_character_sound(m, CHAR_SOUND_GROUND_POUND_WAH)
+        return ACT_SAUL_POUND
+
+    end
 end
 
 function on_set_saul_action(m)
@@ -387,7 +435,7 @@ end
 local TEXTURE_SAUL_ENDING = get_texture_info("saulendingscreen")
 local AlphaVar = 255
 
-function saulendinggender()
+function saulEndingScreen()
     if gNetworkPlayers[0].currLevelNum == LEVEL_ENDING then
 
         AlphaVar = AlphaVar - 1.5
@@ -401,18 +449,12 @@ function saulendinggender()
 
         djui_hud_set_color(0, 0, 0, AlphaVar)
         djui_hud_render_rect(-2, -2, djui_hud_get_screen_width() * 2, djui_hud_get_screen_height() * 2)
+    else
+        AlphaVar = 255
     end
 end
 
-function geo_saul_eye_states(n)
-    local node = cast_graph_node(n)
-    local m = gMarioStates[0]
-    if m.marioBodyState.eyeState == 0 then
-        node.selectedCase = math.random(-16, 2)
-    else
-        node.selectedCase = m.marioBodyState.eyeState - 1
-    end
-end
+--removed eye states because I fucking hate them they don't even sync
 
 if _G.charSelectExists then
     CT_SAUL =_G.charSelect.character_add("Saul", "New Saul Remodel #8", "Saul, Kaktus", {r = 178, g = 204, b = 102}, E_MODEL_SAUL, CT_MARIO, TEX_SAULICON, 1.2)
@@ -435,12 +477,6 @@ if _G.charSelectExists then
     _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_EVIL_SAULD_UP, "Evil Saul'd Up")
     _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_KRISTALL, "Gemstone")
     _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_KAKTUS, "Spiky")
-
-    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvOneCoin, E_MODEL_SAULCOIN)
-    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvTemporaryYellowCoin, E_MODEL_SAULCOIN)
-    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvRedCoin, E_MODEL_RED_SAULCOIN)
-    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvYellowCoin, E_MODEL_SAULCOIN)
-    _G.charSelect.character_add_model_replacement(CT_SAUL, id_bhvHiddenBlueCoin, E_MODEL_BLUE_SAULCOIN)
     
     _G.charSelect.character_add_course_texture(CT_SAUL, COURSE_SAUL)
     _G.charSelect.character_add_voice(E_MODEL_SAUL, VOICETABLE_SAUL)
@@ -448,7 +484,7 @@ if _G.charSelectExists then
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_MARIO_UPDATE, SaulFunction)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_BEFORE_SET_MARIO_ACTION, before_set_saul_action)
     _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_ON_SET_MARIO_ACTION, on_set_saul_action)
-    _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_ON_HUD_RENDER, saulendinggender)
+    _G.charSelect.character_hook_moveset(CT_SAUL, HOOK_ON_HUD_RENDER, saulEndingScreen)
     _G.charSelect.character_add_graffiti(CT_SAUL, TEX_SAULGRAF)
     --_G.charSelect.character_add_health_meter(CT_SAUL, HEALTH_SAUL)
     _G.charSelect.character_add_health_meter(CT_SAUL, healthmeterfunc)

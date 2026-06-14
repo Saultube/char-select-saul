@@ -3215,9 +3215,9 @@ Gfx saul_Left_Hand_DL_mesh_layer_1_mat_override_sauleyehappy_8[] = {
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3233,9 +3233,9 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_sauleyeblink1_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3243,9 +3243,9 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_sauleyeblink2_2[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3253,9 +3253,9 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_sauleyeleft_3[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3263,9 +3263,9 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_sauleyeright_4[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3273,9 +3273,9 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_sauleyeup_5[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3283,9 +3283,9 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_sauleyedown_6[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3293,9 +3293,9 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_sauleyeFUCKINGDEAD_7[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3303,9 +3303,9 @@ Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_mat_override_sauleyehappy_8[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Left_Hand_Open_Switch_Option_Left_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3411,9 +3411,9 @@ Gfx saul_Right_Hand_DL_mesh_layer_1_mat_override_sauleyehappy_8[] = {
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3429,9 +3429,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_sauleyeblink1_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3439,9 +3439,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_sauleyeblink2_2[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3449,9 +3449,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_sauleyeleft_3[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3459,9 +3459,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_sauleyeright_4[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3469,9 +3469,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_sauleyeup_5[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3479,9 +3479,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_sauleyedown_6[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3489,9 +3489,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_sauleyeFUCKINGDEAD_7[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3499,9 +3499,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override_sauleyehappy_8[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3509,9 +3509,9 @@ Gfx saul_Right_Hand_Open_Switch_Option_Right_Hand_Open_mesh_layer_1_mat_override
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3527,9 +3527,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_sauleyeblink1_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3537,9 +3537,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_sauleyeblink2_2[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3547,9 +3547,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_sauleyeleft_3[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3557,9 +3557,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_sauleyeright_4[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3567,9 +3567,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_sauleyeup_5[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3577,9 +3577,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_sauleyedown_6[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3587,9 +3587,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_sauleyeFUCKINGDEAD_7[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3597,9 +3597,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_override_sauleyehappy_8[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3607,9 +3607,9 @@ Gfx saul_Right_Hand_Peace_Switch_Option_Right_Hand_Peace_mesh_layer_1_mat_overri
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3625,9 +3625,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_sauleyeblink1_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3635,9 +3635,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_sauleyeblink2_2[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3645,9 +3645,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_sauleyeleft_3[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3655,9 +3655,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_sauleyeright_4[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3665,9 +3665,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_sauleyeup_5[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3675,9 +3675,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_sauleyedown_6[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3685,9 +3685,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_sauleyeFUCKINGDEAD_7[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3695,9 +3695,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_sauleyehappy_8[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3705,9 +3705,9 @@ Gfx saul_Right_Hand_Cap_Switch_Option_Right_Hand_Cap_mesh_layer_1_mat_override_s
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3723,9 +3723,9 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_sauleyeblink1_1[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3733,9 +3733,9 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_sauleyeblink2_2[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3743,9 +3743,9 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_sauleyeleft_3[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3753,9 +3753,9 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_sauleyeright_4[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3763,9 +3763,9 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_sauleyeup_5[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3773,9 +3773,9 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_sauleyedown_6[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3783,9 +3783,9 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_sauleyeFUCKINGDEAD_7[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
@@ -3793,9 +3793,9 @@ Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_
 };
 
 Gfx saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_mat_override_sauleyehappy_8[] = {
-	gsSPDisplayList(mat_saul_hat),
+	gsSPDisplayList(mat_saul_shirt),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_0),
-	gsSPDisplayList(mat_revert_saul_hat),
+	gsSPDisplayList(mat_revert_saul_shirt),
 	gsSPDisplayList(mat_saul_skin),
 	gsSPDisplayList(saul_Right_Hand_Wing_Cap_Swtich_Option_Right_Hand_Wing_Cap_mesh_layer_1_tri_1),
 	gsSPDisplayList(mat_revert_saul_skin),
