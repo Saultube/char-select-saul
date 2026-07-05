@@ -491,6 +491,7 @@ if _G.charSelectExists then
     _G.charSelect.character_add_animations(E_MODEL_SAUL, ANIMTABLE_SAUL)
     _G.charSelect.character_add_animations(E_MODEL_PLUMBSAUL, ANIMTABLE_SAUL)
 
+    CT_JARED =_G.charSelect.character_add("Jared Fan", "hey guys it's me jared fan", "Saul, ", {r = 0, g = 255, b = 0}, E_MODEL_JARED_FRIEND, CT_MARIO, "j", 1.2)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAUL, "Saul")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_CRAIG, "Craig")
@@ -521,3 +522,11 @@ else
     djui_popup_create("\\#ffffdc\\\n"..TEXT_MOD_NAME.."\nwhat the fuck? \n\nPlease turn off the Character Select Mod\nand Restart the Room!", 6)
 end
 
+function jaredUnlock()
+    if mod_storage_exists("jared") then
+        _G.charSelect.character_set_locked(CT_JARED, false, false)
+    else
+        _G.charSelect.character_set_locked(CT_JARED, true, false)
+    end
+end
+hook_event(HOOK_ON_MODS_LOADED, jaredUnlock)

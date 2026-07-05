@@ -13,6 +13,8 @@ function lugioop(o)
     cur_obj_update_floor_height()
     load_object_collision_model()
     object_step()
+    o.oPosY = o.oFloorHeight
+
     local m = gMarioStates[0]
 
     o.header.gfx.animInfo.curAnim = get_mario_vanilla_animation(CHAR_ANIM_FIRST_PERSON)
@@ -20,6 +22,9 @@ function lugioop(o)
 
     if o.oAction == 0 then
         if (dist_between_objects(o, m.marioObj)) < 300 then
+            mod_storage_save_bool("jared", true)
+            _G.charSelect.character_set_locked(CT_JARED, false, true)
+
             cutscene_object_with_dialog(CUTSCENE_DIALOG, o, DIALOG_Jared)
             o.oAction = 1
         end
