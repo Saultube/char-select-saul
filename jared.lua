@@ -22,7 +22,7 @@ function lugioop(o)
 
     if o.oAction == 0 then
         if (dist_between_objects(o, m.marioObj)) < 300 then
-            mod_storage_save_bool("jared", true)
+            mod_storage_save("jared", 1)
             _G.charSelect.character_set_locked(CT_JARED, function() return true end, true)
 
             cutscene_object_with_dialog(CUTSCENE_DIALOG, o, DIALOG_Jared)

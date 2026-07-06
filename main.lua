@@ -523,10 +523,10 @@ else
 end
 
 local function jaredUnlock()
-    if mod_storage_load_bool("jared") then
-        return true
-    else
+    if mod_storage_exists("jared") then
         return false
+    else
+        return true
     end
 end
 
