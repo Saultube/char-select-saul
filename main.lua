@@ -492,7 +492,6 @@ if _G.charSelectExists then
     _G.charSelect.character_add_animations(E_MODEL_PLUMBSAUL, ANIMTABLE_SAUL)
 
     CT_JARED =_G.charSelect.character_add("Jared Fan", "hey guys it's me jared fan", "Saul, ", {r = 0, g = 255, b = 0}, E_MODEL_JARED_FRIEND, CT_MARIO, "j", 1.2)
-    _G.charSelect.character_set_locked(CT_JARED, false, false)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAUL, "Saul")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_CRAIG, "Craig")
