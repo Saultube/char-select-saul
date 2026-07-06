@@ -523,9 +523,14 @@ else
     djui_popup_create("\\#ffffdc\\\n"..TEXT_MOD_NAME.."\nwhat the fuck? \n\nPlease turn off the Character Select Mod\nand Restart the Room!", 6)
 end
 
-function jaredUnlock()
-    if mod_storage_exists("jared") then
-        _G.charSelect.character_set_locked(CT_JARED, false, false)
+local function jaredUnlock()
+    if mod_storage_load_bool("jared") then
+        return true
+    else
+        return false
     end
 end
-hook_event(HOOK_ON_MODS_LOADED, jaredUnlock)
+
+hook_event(HOOK_ON_MODS_LOADED, function()
+    _G.charSelect.character_set_locked(CT_JARED, jaredUnlock, true)
+end)
