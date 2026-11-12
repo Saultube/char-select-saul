@@ -83,6 +83,7 @@ local PALETTE_SAUL = {
         [HAIR]   = "8E765A",
         [SKIN]   = "FFDDA3",
         [CAP]    = "B2CC66",
+        [SHOES]  = "535266",
     }
 
     local PALETTE_CRAIG = {
@@ -92,6 +93,7 @@ local PALETTE_SAUL = {
         [HAIR]   = "745200",
         [SKIN]   = "ffcd4b",
         [CAP]    = "ce6d00",
+        [SHOES]  = "FF925625",
     }
 
     local PALETTE_GOOD_SAUL = {
@@ -101,6 +103,7 @@ local PALETTE_SAUL = {
         [HAIR]   = "8E765A",
         [SKIN]   = "FFDDA3",
         [CAP]    = "7d85ee",
+        [SHOES]  = "83C7EE",
     }
 
     local PALETTE_EVIL_SAUL = {
@@ -110,6 +113,7 @@ local PALETTE_SAUL = {
         [HAIR]   = "8E765A",
         [SKIN]   = "FFDDA3",
         [CAP]    = "c33131",
+        [SHOES]  = "FF5A1C1C",
     }
 
     local PALETTE_SAUL_JER = {
@@ -486,7 +490,7 @@ end
 
 if _G.charSelectExists then
     CT_SAUL =_G.charSelect.character_add("Saul", "New Saul Remodel #8", "Saul, Kaktus", {r = 178, g = 204, b = 102}, E_MODEL_SAUL, CT_MARIO, TEX_SAULICON, 1.2)
-    _G.charSelect.character_add_costume(CT_SAUL, "Plumber Saul", "Saul but mildly more racist", "Saul, Kaktus", {r = 65, g = 47, b = 133}, E_MODEL_PLUMBSAUL, CT_MARIO, TEX_SAULPLUBBERICON, 1.2)
+    _G.charSelect.character_add_costume(CT_SAUL, "Plumber Saul", "Saul from the Shoshinkai 1995", "Saul, Kaktus", {r = 65, g = 47, b = 133}, E_MODEL_PLUMBSAUL, CT_MARIO, TEX_SAULPLUBBERICON, 1.2)
     
     _G.charSelect.character_add_animations(E_MODEL_SAUL, ANIMTABLE_SAUL)
     _G.charSelect.character_add_animations(E_MODEL_PLUMBSAUL, ANIMTABLE_SAUL)
@@ -524,12 +528,10 @@ end
 
 local function jaredUnlock()
     if mod_storage_exists("jared") then
-        return false
+        _G.charSelect.character_set_locked(CT_JARED, true, true)
     else
-        return true
+        _G.charSelect.character_set_locked(CT_JARED, false, true)
     end
 end
 
-hook_event(HOOK_ON_MODS_LOADED, function()
-    _G.charSelect.character_set_locked(CT_JARED, jaredUnlock, true)
-end)
+hook_event(HOOK_ON_MODS_LOADED, jaredUnlock)
