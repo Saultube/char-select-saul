@@ -42,7 +42,9 @@ E_MODEL_JARED_FRIEND = smlua_model_util_get_id("jared_geo")
 function checkcourtyard()
     if gNetworkPlayers[0].currLevelNum == LEVEL_CASTLE_COURTYARD then
         if gMarioStates[0].numStars >= 24 then
-            spawn_non_sync_object(id_bhvDIALOG_Jared, E_MODEL_JARED_FRIEND, 14, 102, -1039, nil)
+            spawn_non_sync_object(id_bhvDIALOG_Jared, E_MODEL_JARED_FRIEND, 14, 102, -1039, function(o)
+                o.oBehParams2ndByte = DIALOG_Jared
+            end)
         end
     end
 end
