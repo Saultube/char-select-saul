@@ -4078,7 +4078,7 @@ Gfx mat_revert_jared_cap_v3[] = {
 };
 
 Gfx mat_jared_cal[] = {
-	gsSPSetLights1(jared_cal_lights),
+	gsSPCopyLightsPlayerPart(CAP),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),

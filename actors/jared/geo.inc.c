@@ -378,6 +378,7 @@ const GeoLayout jared_geo[] = {
 			GEO_SCALE(LAYER_FORCE, 16384),
 			GEO_OPEN_NODE(),
 				GEO_ASM(0, geo_mirror_mario_backface_culling),
+				GEO_ASM(0, geo_mario_set_player_colors),
 				GEO_ASM(0, geo_mirror_mario_set_alpha),
 				GEO_SWITCH_CASE(0, geo_switch_mario_stand_run),
 				GEO_OPEN_NODE(),
