@@ -3,6 +3,9 @@ local function lugiin(o)
     o.oAction = 0
     o.oTimer = 0
 
+    o.hitboxRadius = 80
+    o.hitboxHeight = 120
+
     o.oInteractType = INTERACT_TEXT
     o.oInteractionSubtype = INT_SUBTYPE_NPC
 
@@ -14,14 +17,13 @@ smlua_text_utils_dialog_replace(DIALOG_Jared, 11, 2, 95, 200, "You can play as m
 
 function lugioop(o)
     cur_obj_update_floor_height()
-    load_object_collision_model()
     object_step()
     o.oPosY = o.oFloorHeight
 
     local m = gMarioStates[0]
 
     o.header.gfx.animInfo.curAnim = get_mario_vanilla_animation(CHAR_ANIM_FIRST_PERSON)
-    o.oFaceAngleYaw = obj_angle_to_object(m.marioObj, o) - 32768
+    o.oFaceAngleYaw = approach_s16_symmetric(o.oFaceAngleYaw, obj_angle_to_object(m.marioObj, o) - 32768, 2000)
 
     if o.oAction == 0 then
         if (dist_between_objects(o, m.marioObj)) < 300 then
@@ -31,9 +33,11 @@ function lugioop(o)
             cutscene_object_with_dialog(CUTSCENE_DIALOG, o, DIALOG_Jared)
             o.oAction = 1
         end
+    elseif o.oAction == 1 then
+        if (dist_between_objects(o, m.marioObj)) > 800 then
+            o.oAction = 0
+        end
     end
-
-    o.oInteractStatus = 0
 end
 
 id_bhvDIALOG_Jared = hook_behavior(id_bhvDIALOG_Jared, OBJ_LIST_GENACTOR, true, lugiin, lugioop)
