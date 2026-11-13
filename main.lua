@@ -207,74 +207,6 @@ local PALETTE_SAUL = {
 ACT_SAUL_TWIRL = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
 ACT_SAUL_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_DIVING)
 ACT_SAUL_FLING = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_DIVING)
-ACT_JARED_WALKING = allocate_mario_action(ACT_GROUP_MOVING | ACT_FLAG_ALLOW_FIRST_PERSON | ACT_FLAG_MOVING | ACT_FLAG_CUSTOM_ACTION) --stealing this from jaredfan lmfao
-
-function act_jared_walking(m)
-    if (should_begin_sliding(m)) ~= 0 then
-        return set_mario_action(m, ACT_BEGIN_SLIDING, 0);
-    end
-
-    if (m.input & INPUT_A_PRESSED) ~= 0 then
-        return set_jumping_action(m, ACT_JUMP, 0);
-    end
-
-    if (check_ground_dive_or_punch(m) ~= 0) then
-        return 1;
-    end
-
-    if (m.input & INPUT_ZERO_MOVEMENT) ~= 0 then
-        begin_braking_action(m);
-    end
-
-    if (m.input & INPUT_Z_PRESSED) ~= 0 then
-        return drop_and_set_mario_action(m, ACT_CROUCH_SLIDE, 0);
-    end
-
-    mario_drop_held_object(m);
-
-    update_walking_speed(m);
-
-    set_mario_animation(m, MARIO_ANIM_RUNNING)
-
-    m.marioObj.header.gfx.animInfo.animAccel = (m.forwardVel * 20000)
-
-    local stepResult = perform_ground_step(m)
-    if stepResult == GROUND_STEP_LEFT_GROUND then
-        set_mario_action(m, ACT_FREEFALL, 0);
-    end
-
-    return false;
-end
-
-hook_mario_action(ACT_JARED_WALKING, { every_frame = act_jared_walking, gravity = nil } )
-
-local function fix_interactions(m, obj, interactType)
-    if (m.action == ACT_JARED_WALKING) then
-        if (interactType == INTERACT_WARP_DOOR) then
-            m.action = ACT_WALKING
-            local interaction = interact_warp_door(m, INTERACT_WARP_DOOR, obj)
-            if (interaction == 0 and m.action ~= ACT_READING_AUTOMATIC_DIALOG) then
-                m.action = ACT_JARED_WALKING
-            end
-        end
-        if (interactType == INTERACT_DOOR) then
-            m.action = ACT_WALKING
-            local interaction = interact_door(m, INTERACT_DOOR, obj)
-            if (interaction == 0 and m.action ~= ACT_READING_AUTOMATIC_DIALOG) then
-                m.action = ACT_JARED_WALKING
-            end
-        end
-        if (interactType == INTERACT_KOOPA_SHELL) then
-            m.action = ACT_WALKING
-            local interaction = interact_koopa_shell(m, INTERACT_KOOPA_SHELL, obj)
-            if (interaction == 0) then
-                m.action = ACT_JARED_WALKING
-            end
-        end
-    end
-end
-
-hook_event(HOOK_ALLOW_INTERACT, fix_interactions)
 
 function act_saul_twirl(m)
     local e = gStateExtras[m.playerIndex]
@@ -344,7 +276,7 @@ saultwirltable = { -- saul twirl table
 --ACTUAL MOVESET
 
 function SaulFunction(m)
-local e = gStateExtras[m.playerIndex]
+    local e = gStateExtras[m.playerIndex]
     --[[
     if m.marioObj.header.gfx.animInfo.animID == MARIO_ANIM_IDLE_HEAD_LEFT then
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_RIGHT
@@ -358,6 +290,10 @@ local e = gStateExtras[m.playerIndex]
         m.marioBodyState.eyeState = MARIO_EYES_LOOK_LEFT
     end
     --]]
+    if smlua_anim_util_get_current_animation_name(m.marioObj) ~= nil then
+        m.marioObj.header.gfx.pos.y = m.marioObj.header.gfx.pos.y + 8
+    end
+
     if m.input & INPUT_A_PRESSED ~= 0 and e.HasSaultwirled == false and saultwirltable[m.action] == true and m.vel.y < 0 then
         set_mario_action(m, ACT_SAUL_TWIRL, 0)
         audio_sample_play(SAUL_TWIRL, m.pos, get_volume_sfx() / 76)
@@ -384,10 +320,6 @@ end
 
 function before_set_saul_action(m, inc)
     local e = gStateExtras[m.playerIndex]
-
-    if inc == ACT_WALKING then
-        return ACT_JARED_WALKING
-    end
 
     if inc == ACT_DIVE and m.controller.buttonDown & A_BUTTON ~= 0 and m.action == ACT_WALKING then
 
@@ -443,10 +375,12 @@ function healthmeterfunc(localIndex, health, prevX, prevY, prevScaleX, prevScale
             curanimframe = -1
         end
 
-        djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, 18, 180 + math.abs(y), 0.36, 1, 0, 16, 48, 16)
+        local posy = 0
+
+        djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, 18, 180 + math.abs(posy), 0.36, 1, 0, 16, 48, 16)
         
         for i = 1, squares do
-            djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, 22 + ((i - 1) * 17), 196 + (i - 1) + math.abs(y), 1, 1, theSaulFunctionName(i), 0, 16, 16)
+            djui_hud_render_texture_tile(TEX_SAULHEALTHICONS, 22 + ((i - 1) * 17), 196 + (i - 1) + math.abs(posy), 1, 1, theSaulFunctionName(i), 0, 16, 16)
         end
     else
         local squares = health >> 8
