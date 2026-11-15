@@ -4017,7 +4017,7 @@ Gfx jared_000_displaylist_005_mesh_layer_1_tri_0[] = {
 
 
 Gfx mat_jared_body_v3[] = {
-	gsSPSetLights1(jared_body_v3_lights),
+	gsSPCopyLightsPlayerPart(PANTS),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -4058,7 +4058,7 @@ Gfx mat_revert_jared_metal_v3_001[] = {
 };
 
 Gfx mat_jared_cap_v3[] = {
-	gsSPSetLights1(jared_cap_v3_lights),
+	gsSPCopyLightsPlayerPart(SHIRT),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -4103,7 +4103,7 @@ Gfx mat_revert_jared_cal[] = {
 };
 
 Gfx mat_jared_sideburns_v3_001[] = {
-	gsSPSetLights1(jared_sideburns_v3_001_lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -4123,7 +4123,7 @@ Gfx mat_revert_jared_sideburns_v3_001[] = {
 };
 
 Gfx mat_jared_face_0___eye_open_v3_001[] = {
-	gsSPSetLights1(jared_face_0___eye_open_v3_001_lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -4143,7 +4143,7 @@ Gfx mat_revert_jared_face_0___eye_open_v3_001[] = {
 };
 
 Gfx mat_jared_mustache_v3_001[] = {
-	gsSPSetLights1(jared_mustache_v3_001_lights),
+	gsSPCopyLightsPlayerPart(SKIN),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT, TEXEL0, SHADE, TEXEL0_ALPHA, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -4163,7 +4163,7 @@ Gfx mat_revert_jared_mustache_v3_001[] = {
 };
 
 Gfx mat_jared_hair_v3_001[] = {
-	gsSPSetLights1(jared_hair_v3_001_lights),
+	gsSPCopyLightsPlayerPart(HAIR),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -4220,7 +4220,7 @@ Gfx mat_revert_jared_wing_1_v3_001[] = {
 };
 
 Gfx mat_jared_gloves_v3_001[] = {
-	gsSPSetLights1(jared_gloves_v3_001_lights),
+	gsSPCopyLightsPlayerPart(GLOVES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),
@@ -4235,7 +4235,7 @@ Gfx mat_revert_jared_gloves_v3_001[] = {
 };
 
 Gfx mat_jared_shoes_v3_001[] = {
-	gsSPSetLights1(jared_shoes_v3_001_lights),
+	gsSPCopyLightsPlayerPart(SHOES),
 	gsDPPipeSync(),
 	gsDPSetCombineLERP(0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT, 0, 0, 0, SHADE, 0, 0, 0, ENVIRONMENT),
 	gsDPSetAlphaDither(G_AD_NOISE),

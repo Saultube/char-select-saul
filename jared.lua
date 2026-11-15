@@ -54,3 +54,27 @@ function checkcourtyard()
 end
 
 hook_event(HOOK_ON_LEVEL_INIT, checkcourtyard)
+
+ACT_JARED_BAD_SIDEFLIP = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
+function act_bad_sideflip(m)
+    local stepresult = common_air_action_step(m, ACT_SIDE_FLIP_LAND, CHAR_ANIM_FORWARD_FLIP, AIR_STEP_CHECK_LEDGE_GRAB)
+    m.actionTimer = m.actionTimer + 1
+    m.marioObj.header.gfx.angle.y = m.marioObj.header.gfx.angle.y + 32768
+
+    if (m.input & INPUT_Z_PRESSED) ~= 0 then
+        return set_mario_action(m, ACT_GROUND_POUND, 0)
+    end
+end
+hook_mario_action(ACT_JARED_BAD_SIDEFLIP, act_bad_sideflip)
+
+function before_set_jared_action(m, inc)
+    if inc == ACT_SIDE_FLIP then
+
+        play_character_sound(m, CHAR_SOUND_WAH2)
+        m.pos.y = m.pos.y + 2
+        m.vel.y = 30
+        m.faceAngle.y = m.intendedYaw
+        return ACT_JARED_BAD_SIDEFLIP
+
+    end
+end

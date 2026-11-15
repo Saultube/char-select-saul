@@ -205,7 +205,7 @@ local PALETTE_SAUL = {
 
 -- ACTIONS
 ACT_SAUL_TWIRL = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR)
-ACT_SAUL_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_DIVING)
+ACT_SAUL_POUND = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING)
 ACT_SAUL_FLING = allocate_mario_action(ACT_GROUP_AIRBORNE | ACT_FLAG_AIR | ACT_FLAG_ATTACKING | ACT_FLAG_DIVING)
 
 function act_saul_twirl(m)
@@ -302,8 +302,8 @@ function SaulFunction(m)
     if m.input & INPUT_A_PRESSED ~= 0 and m.action == ACT_GROUND_POUND_LAND then
         play_sound(SOUND_GENERAL_BOING2, m.marioObj.header.gfx.cameraToObject)
         m.forwardVel = 65
-        set_mario_action(m, ACT_SAUL_FLING, 0)
         m.vel.y = 60
+        set_mario_action(m, ACT_SAUL_FLING, 0)
         if (m.flags & MARIO_WING_CAP) == 0 then
             play_character_sound(m, CHAR_SOUND_YAHOO)
         end
@@ -429,7 +429,7 @@ if _G.charSelectExists then
     _G.charSelect.character_add_animations(E_MODEL_SAUL, ANIMTABLE_SAUL)
     _G.charSelect.character_add_animations(E_MODEL_PLUMBSAUL, ANIMTABLE_SAUL)
 
-    CT_JARED =_G.charSelect.character_add("Jared Fan", "hey guys it's me jared fan", "Saul, ", {r = 0, g = 255, b = 0}, E_MODEL_JARED_FRIEND, CT_MARIO, "j", 1.2)
+    CT_JARED =_G.charSelect.character_add("Jared Fan", "hey guys it's me jared fan, Evil Fucked Up's Fifth Brother", "Saul, ", {r = 0, g = 255, b = 0}, E_MODEL_JARED_FRIEND, CT_MARIO, "j", 1.2)
 
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_SAUL, "Saul")
     _G.charSelect.character_add_palette_preset(E_MODEL_SAUL, PALETTE_CRAIG, "Craig")
@@ -456,6 +456,8 @@ if _G.charSelectExists then
     --_G.charSelect.character_add_health_meter(CT_SAUL, HEALTH_SAUL)
     _G.charSelect.character_add_health_meter(CT_SAUL, healthmeterfunc)
     _G.charSelect.character_set_category(CT_SAUL, "DXA", true)
+
+    _G.charSelect.character_hook_moveset(CT_JARED, HOOK_BEFORE_SET_MARIO_ACTION, before_set_jared_action)
 else
     djui_popup_create("\\#ffffdc\\\n"..TEXT_MOD_NAME.."\nwhat the fuck? \n\nPlease turn off the Character Select Mod\nand Restart the Room!", 6)
 end
