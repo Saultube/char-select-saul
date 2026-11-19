@@ -126,12 +126,13 @@ local PALETTE_SAUL = {
     }
 
     local PALETTE_SAULOTTE = {
-        [PANTS]  = "103374", --dont delete this color cuz its used in cs's paintbucket
-        [SHIRT]  = "B814A6",
-        [GLOVES] = "103374",
-        [HAIR]   = "7B4116",
+        [PANTS]  = "FF63AC", --dont delete this color cuz its used in cs's paintbucket
+        [SHIRT]  = "49002B",
+        [GLOVES] = "49002B",
+        [HAIR]   = "7F4827",
         [SKIN]   = "FFAA6B",
-        [CAP]    = "B814A6",
+        [CAP]    = "FF63AC",
+        [SHOES]  = "FF63AC",
     }
 
     local PALETTE_SAUL_PLUMB = {
@@ -188,6 +189,26 @@ local PALETTE_SAUL = {
         [HAIR]   = "743F39",
         [SKIN]   = "DB9C70",
         [CAP]    = "3E8948",
+    }
+
+    local PALETTE_JARED_FAN = {
+        [PANTS]  = "0000FF",
+        [SHIRT]  = "FF0000",
+        [GLOVES] = "FFFFFF",
+        [HAIR]   = "730600",
+        [SKIN]   = "FEC179",
+        [CAP]    = "00FF00",
+        [SHOES]  = "721C0E",
+    }
+
+    local PALETTE_EVIL_JARED_UP = {
+        [PANTS]  = "5e5afe",
+        [SHIRT]  = "fe002a",
+        [GLOVES] = "FFFFFF",
+        [HAIR]   = "743F39",
+        [SKIN]   = "fefe84",
+        [CAP]    = "fe002a",
+        [SHOES]  = "743F39",
     }
 
 
@@ -444,6 +465,9 @@ if _G.charSelectExists then
     _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_EVIL_SAULD_UP, "Evil Saul'd Up")
     _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_KRISTALL, "Gemstone")
     _G.charSelect.character_add_palette_preset(E_MODEL_PLUMBSAUL, PALETTE_SAUL_KAKTUS, "Spiky")
+
+    _G.charSelect.character_add_palette_preset(E_MODEL_JARED_FRIEND, PALETTE_JARED_FAN, "Jared Fan")
+    _G.charSelect.character_add_palette_preset(E_MODEL_JARED_FRIEND, PALETTE_EVIL_JARED_UP, "The Elder")
     
     _G.charSelect.character_add_course_texture(CT_SAUL, COURSE_SAUL)
     _G.charSelect.character_add_voice(E_MODEL_SAUL, VOICETABLE_SAUL)
